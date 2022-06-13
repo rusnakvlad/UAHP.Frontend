@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.align-top-right {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.money {
+  color: green;
+  font-weight: bold;
+}
+
+.align-self-vertical-middle {
+  vertical-align: middle;
+}
+
+.color-primary {
+  color: #3f51b5;
+}
+
+.center-content {
+  text-align: center;
+}
+
+.sticky {
+  position: fixed;
+}

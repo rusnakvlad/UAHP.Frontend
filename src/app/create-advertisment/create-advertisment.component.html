@@ -1,0 +1,108 @@
+<app-page-name pageName="Create Advertisment"></app-page-name>
+<div class="center">
+  <div style="max-width:1000px;margin-top: 10px;">
+    <mat-card class="my-card">
+      <mat-card-content class="center">
+        <form class="my-form">
+          <div class="row">
+            <mat-grid-list cols="2" rowHeight="1.5:1">
+              <mat-grid-tile>
+                <input #csvInput hidden="true" type="file" onclick="this.value=null" accept=".csv"/>
+                <button mat-flat-button color="secondary" (click)="csvInput.click()">Upload Image
+                    <mat-icon color="primary">attach_file</mat-icon>
+                </button>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="row">
+                  <div class="col">
+
+                    <img src="../../assets/images/house.png" class="imageMargins" alt="" width="100px" height="100px">
+                    <img src="../../assets/images/house.png" class="imageMargins" alt="" width="100px" height="100px">
+                    <img src="../../assets/images/house.png" class="imageMargins" alt="" width="100px" height="100px">
+                    <img src="../../assets/images/house.png" class="imageMargins" alt="" width="100px" height="100px">
+                    <img src="../../assets/images/house.png" class="imageMargins" alt="" width="100px" height="100px">
+                    <img src="../../assets/images/house.png" class="imageMargins" alt="" width="100px" height="100px">
+                    <img src="../../assets/images/house.png" class="imageMargins" alt="" width="100px" height="100px">
+                    <img src="../../assets/images/house.png" class="imageMargins" alt="" width="100px" height="100px">
+                    <img src="../../assets/images/house.png" class="imageMargins" alt="" width="100px" height="100px">
+                    <img src="../../assets/images/house.png" class="imageMargins" alt="" width="100px" height="100px">
+                    <img src="../../assets/images/house.png" class="imageMargins" alt="" width="100px" height="100px">
+                    <img src="../../assets/images/house.png" class="imageMargins" alt="" width="100px" height="100px">
+                    
+                  </div>
+              </div>
+              </mat-grid-tile>
+            </mat-grid-list>
+            <div class="col">
+
+              <mat-form-field class="full-width">
+                <mat-label>Price</mat-label>
+                <input matInput placeholder="Price" name="price">
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Region</mat-label>
+                <input matInput placeholder="Region" name="region">
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Distrinct</mat-label>
+                <input matInput placeholder="Distrinct" name="distrinct">
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>City/Village</mat-label>
+                <input matInput placeholder="City/Village" name="city">
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Street</mat-label>
+                <input matInput placeholder="Street" name="street">
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Area</mat-label>
+                <input matInput placeholder="Area" name="Area">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field class="full-width">
+                <mat-label>Floor amount</mat-label>
+                <input matInput placeholder="Floor Amount" name="floorAmount">
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Room amount</mat-label>
+                <input matInput placeholder="Room Amount" name="roomAmount">
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Hause year</mat-label>
+                <input matInput placeholder="Hause year" name="hauseYear">
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Hause type</mat-label>
+                <input matInput placeholder="Hause type" name="hauseType">
+              </mat-form-field>
+
+              <div class="row">
+                <mat-checkbox class="checks" color="primary">Pool</mat-checkbox>
+                <mat-checkbox class="checks" color="primary">Balkon</mat-checkbox>
+                <mat-checkbox class="checks" color="primary">Purchase Oportunity</mat-checkbox>
+            </div>
+            </div>
+            <app-chips title="Tags" [allElements]="['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry']"></app-chips>
+            <mat-form-field appearance="fill">
+              <mat-label>Description</mat-label>
+              <textarea matInput placeholder="Leave a description"></textarea>
+            </mat-form-field>
+          </div>
+          <mat-card-actions class="center">
+            <button mat-raised-button color="primary">Create and Publish</button>
+          </mat-card-actions>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

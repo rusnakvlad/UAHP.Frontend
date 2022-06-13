@@ -1,0 +1,109 @@
+<app-page-name pageName="Advertisment Information"></app-page-name>
+<div class="center">
+  <div style="max-width:1000px;margin-top: 10px;">
+    <mat-card class="my-card">
+      <mat-card-content class="center">
+        <form class="my-form">
+          <div class="row">
+            <mat-grid-list cols="2" rowHeight="1.5:1">
+              <mat-grid-tile>
+                <img src="../../assets/images/house.png" class="imageMargins" alt="" width="100%" height="100%">
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="row align-top-right" style="text-align: right; gap: 10px;">
+                  <div class="money" style="font-size: 15pt;">
+                    {{50000 | currency}}</div>
+                  <div>
+                    <div style="cursor: pointer;" matTooltip="Copy email" matTooltipPosition="right">
+                      <span class="phone-email">test@gmail.com </span>
+                      <mat-icon class="align-self-vertical-middle" color="primary"> contact_mail</mat-icon>
+                    </div>
+                    <div style="cursor: pointer;" matTooltip="Copy number" matTooltipPosition="right">
+                      <span class="phone-email">+38054752515 </span>
+                      <mat-icon class="align-self-vertical-middle" color="primary"> contact_phone</mat-icon>
+                    </div>
+                  </div>
+                </div>
+              </mat-grid-tile>
+
+            </mat-grid-list>
+            <div class="col">
+
+              <mat-form-field class="full-width">
+                <mat-label>Region</mat-label>
+                <input matInput placeholder="Region" name="region" value="somevalue" readonly>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Distrinct</mat-label>
+                <input matInput placeholder="Distrinct" name="distrinct" readonly>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>City/Village</mat-label>
+                <input matInput placeholder="City/Village" name="city" readonly>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Street</mat-label>
+                <input matInput placeholder="Street" name="street" readonly>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Area</mat-label>
+                <input matInput placeholder="Area" name="Area" readonly>
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field class="full-width">
+                <mat-label>Floor amount</mat-label>
+                <input matInput placeholder="Floor Amount" name="floorAmount" readonly>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Room amount</mat-label>
+                <input matInput placeholder="Room Amount" name="roomAmount" readonly>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Hause year</mat-label>
+                <input matInput placeholder="Hause year" name="hauseYear" readonly>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Hause type</mat-label>
+                <input matInput placeholder="Hause type" name="hauseType" readonly>
+              </mat-form-field>
+
+              <div class="row">
+                <mat-checkbox class="checks" color="primary" [checked]="true" (click)="$event.preventDefault()">Pool
+                </mat-checkbox>
+                <mat-checkbox class="checks" color="primary" [checked]="true" (click)="$event.preventDefault()">Balkon
+                </mat-checkbox>
+                <mat-checkbox class="checks" color="primary" [checked]="true" (click)="$event.preventDefault()">Purchase
+                  Oportunity</mat-checkbox>
+              </div>
+
+            </div>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Tags</mat-label>
+              <textarea style="font-weight: bold;color: #3f51b5;padding-top: 5px;" [readonly]="true"
+                matInput> #tag1</textarea>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Description</mat-label>
+              <textarea [readonly]="true" matInput
+                value="Sit dolor deserunt elit amet amet Lorem id sunt do. Mollit consectetur duis ut in in consectetur consectetur laborum sint fugiat eiusmod veniam quis culpa. Sit id tempor reprehenderit officia dolor exercitation pariatur. Dolor labore ea aute qui dolore ad mollit in anim in duis."></textarea>
+            </mat-form-field>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>
+<div class="center">
+<app-comments></app-comments>
+</div>

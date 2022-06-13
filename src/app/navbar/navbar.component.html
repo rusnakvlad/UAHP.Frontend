@@ -1,0 +1,20 @@
+<p>
+    <mat-toolbar color="primary">
+        <button mat-button routerLink="home">
+            <mat-icon class="aling-self-vertical-middle">home</mat-icon>
+            <span style="font-size: 16pt;">UAHause</span>
+        </button>
+        <span class="spacer"></span>
+        <span mat-button [matMenuTriggerFor]="beforeMenu" >
+            <span style="cursor: default;font-size: smaller;">Firstname Lastname</span>
+            <mat-icon class="align-self-vertical-middle">keyboard_arrow_down</mat-icon>
+        </span>
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+            <button mat-menu-item routerLink="advertisment/profile">Profile</button>
+            <button mat-menu-item routerLink="advertisment/myadvertisments">My Advertisments</button>
+            <button mat-menu-item routerLink="advertisment/favorites">Favorites</button>
+            <button mat-menu-item routerLink="advertisment/comparasion">Comparasion</button>
+            <button mat-menu-item style="font-weight: bold;" routerLink="profile">Log out</button>
+        </mat-menu>
+    </mat-toolbar>
+</p>
