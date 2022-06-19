@@ -5,11 +5,11 @@
             <span style="font-size: 16pt;">UAHause</span>
         </button>
         <span class="spacer"></span>
-        <span mat-button [matMenuTriggerFor]="beforeMenu" >
-            <span style="cursor: default;font-size: smaller;">Firstname Lastname</span>
+        <span mat-button [matMenuTriggerFor]="beforeMenu" [hidden]="!isAuthenticate">
+            <span style="cursor: default;font-size: smaller;">{{UserName}} {{Surname}}</span>
             <mat-icon class="align-self-vertical-middle">keyboard_arrow_down</mat-icon>
         </span>
-        <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <mat-menu #beforeMenu="matMenu" xPosition="before" [hidden]="!isAuthenticate">
             <button mat-menu-item routerLink="advertisment/profile">Profile</button>
             <button mat-menu-item routerLink="advertisment/myadvertisments">My Advertisments</button>
             <button mat-menu-item routerLink="advertisment/favorites">Favorites</button>

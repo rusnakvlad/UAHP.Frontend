@@ -18,12 +18,14 @@ import { AdvertismentFullInfoComponent } from './advertisments-cards/advertismen
 import { AdvertismentComparasionInfoComponent } from './for-comparasion/advertisment-comparasion-info/advertisment-comparasion-info.component';
 import { CreateAdvertismentComponent } from './create-advertisment/create-advertisment.component';
 import { ChipsComponent } from './helpers/chips/chips.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdvertismentShortInfoComponent } from './advertisments-cards/advertisment-short-info/advertisment-short-info.component';
 import { FilterPanelComponent } from './filter-panel/filter-panel.component';
 import { CommentsComponent } from './comments/comments.component';
 import { CommentComponent } from './comments/comment/comment.component';
 import { CreateCommentComponent } from './comments/create-comment/create-comment.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './services/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,8 +55,10 @@ import { CreateCommentComponent } from './comments/create-comment/create-comment
     AppRoutingModule,
     MaterialModules,
     ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
