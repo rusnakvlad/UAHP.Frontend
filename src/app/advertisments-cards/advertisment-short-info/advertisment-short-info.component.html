@@ -8,11 +8,11 @@
                 <mat-icon style="cursor: pointer;margin-right: 5px;">star_border</mat-icon>
                 <mat-icon style="cursor: pointer;">compare</mat-icon>
             </div>
-            <div>Area: 541 (km2)</div>
-            <div>Year: 2015</div>
-            <div>Room number: 4</div>
-            <div>Balkon: Yes</div>
-            <div>Price: <span class="money">{{55000 | currency}}</span></div>
+            <div>Area: {{advertisment.areaOfHouse}} (km2)</div>
+            <div>Year: {{advertisment.houseYear}}</div>
+            <div>Room number: {{advertisment.roomNumber}}</div>
+            <div>Balkon: {{advertisment.balkon}}</div>
+            <div>Price: <span class="money">{{advertisment.price | currency}}</span></div>
         </div>
     </div>
 </div>

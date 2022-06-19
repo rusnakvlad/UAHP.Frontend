@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AdShortInfoDTO } from 'src/app/find-advertisments/Models/AdShortInfo.model';
 
 @Component({
   selector: 'app-advertisment-short-info',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdvertismentShortInfoComponent implements OnInit {
 
+  @Input() advertisment: AdShortInfoDTO;
+  
   constructor() { }
 
   ngOnInit(): void {
