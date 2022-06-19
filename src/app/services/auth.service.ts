@@ -69,4 +69,11 @@ export class AuthService {
             console.log(user);
         })
     }
+
+    public Logout(){
+        localStorage.removeItem("uahpAccessToken");
+        localStorage.removeItem("uahpUserId");
+        localStorage.removeItem("uahpIsAuth");
+        location.reload();
+    }
 }
