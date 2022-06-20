@@ -15,11 +15,11 @@
                     {{50000 | currency}}</div>
                   <div>
                     <div style="cursor: pointer;" matTooltip="Copy email" matTooltipPosition="right">
-                      <span class="phone-email">test@gmail.com </span>
+                      <span class="phone-email">{{ad.ownerEmail}}</span>
                       <mat-icon class="align-self-vertical-middle" color="primary"> contact_mail</mat-icon>
                     </div>
                     <div style="cursor: pointer;" matTooltip="Copy number" matTooltipPosition="right">
-                      <span class="phone-email">+38054752515 </span>
+                      <span class="phone-email">{{ad.ownerPhone}}</span>
                       <mat-icon class="align-self-vertical-middle" color="primary"> contact_phone</mat-icon>
                     </div>
                   </div>
@@ -31,57 +31,52 @@
 
               <mat-form-field class="full-width">
                 <mat-label>Region</mat-label>
-                <input matInput placeholder="Region" name="region" value="somevalue" readonly>
-              </mat-form-field>
-
-              <mat-form-field class="full-width">
-                <mat-label>Distrinct</mat-label>
-                <input matInput placeholder="Distrinct" name="distrinct" readonly>
+                <input matInput placeholder="Region" name="region" value="somevalue" readonly [(ngModel)]="ad.region">
               </mat-form-field>
 
               <mat-form-field class="full-width">
                 <mat-label>City/Village</mat-label>
-                <input matInput placeholder="City/Village" name="city" readonly>
+                <input matInput placeholder="City/Village" name="city" readonly [(ngModel)]="ad.city">
               </mat-form-field>
 
               <mat-form-field class="full-width">
                 <mat-label>Street</mat-label>
-                <input matInput placeholder="Street" name="street" readonly>
+                <input matInput placeholder="Street" name="street" readonly [(ngModel)]="ad.city">
               </mat-form-field>
 
               <mat-form-field class="full-width">
                 <mat-label>Area</mat-label>
-                <input matInput placeholder="Area" name="Area" readonly>
+                <input matInput placeholder="Area" name="Area" readonly [(ngModel)]="ad.areaOfHouse">
               </mat-form-field>
             </div>
             <div class="col">
               <mat-form-field class="full-width">
                 <mat-label>Floor amount</mat-label>
-                <input matInput placeholder="Floor Amount" name="floorAmount" readonly>
+                <input matInput placeholder="Floor Amount" name="floorAmount" readonly [(ngModel)]="ad.floorAmount" >
               </mat-form-field>
 
               <mat-form-field class="full-width">
                 <mat-label>Room amount</mat-label>
-                <input matInput placeholder="Room Amount" name="roomAmount" readonly>
+                <input matInput placeholder="Room Amount" name="roomAmount" readonly [(ngModel)]="ad.roomNumber" >
               </mat-form-field>
 
               <mat-form-field class="full-width">
                 <mat-label>Hause year</mat-label>
-                <input matInput placeholder="Hause year" name="hauseYear" readonly>
+                <input matInput placeholder="Hause year" name="hauseYear" readonly [(ngModel)]="ad.houseYear" >
               </mat-form-field>
 
               <mat-form-field class="full-width">
                 <mat-label>Hause type</mat-label>
-                <input matInput placeholder="Hause type" name="hauseType" readonly>
+                <input matInput placeholder="Hause type" name="hauseType" readonly [(ngModel)]="ad.houseType" >
               </mat-form-field>
 
               <div class="row">
-                <mat-checkbox class="checks" color="primary" [checked]="true" (click)="$event.preventDefault()">Pool
+                <mat-checkbox class="checks" color="primary" name="pool" [checked]="ad.pool" (click)="$event.preventDefault()">Pool
                 </mat-checkbox>
-                <mat-checkbox class="checks" color="primary" [checked]="true" (click)="$event.preventDefault()">Balkon
+                <mat-checkbox class="checks" color="primary" name="balkon" [checked]="ad.balkon" (click)="$event.preventDefault()">Balkon
                 </mat-checkbox>
-                <mat-checkbox class="checks" color="primary" [checked]="true" (click)="$event.preventDefault()">Purchase
-                  Oportunity</mat-checkbox>
+                <mat-checkbox class="checks" color="primary" name="rent" [checked]="ad.rentOportunity" (click)="$event.preventDefault()">Rent Oportunity
+                </mat-checkbox>
               </div>
 
             </div>
@@ -94,8 +89,7 @@
 
             <mat-form-field appearance="fill">
               <mat-label>Description</mat-label>
-              <textarea [readonly]="true" matInput
-                value="Sit dolor deserunt elit amet amet Lorem id sunt do. Mollit consectetur duis ut in in consectetur consectetur laborum sint fugiat eiusmod veniam quis culpa. Sit id tempor reprehenderit officia dolor exercitation pariatur. Dolor labore ea aute qui dolore ad mollit in anim in duis."></textarea>
+              <textarea [readonly]="true" matInput name="description" [(ngModel)]="ad.description"></textarea>
             </mat-form-field>
           </div>
         </form>

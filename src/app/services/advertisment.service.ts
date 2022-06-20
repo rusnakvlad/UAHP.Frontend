@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { CommonApiService } from "src/app/services/commonApi.service";
 import { AdDto } from "../models/AdDto.model";
+import { AdFullInfoDto } from "../models/AdFullInfoDto.model";
 import { AdShortInfoDTO } from "../models/AdShortInfo.model";
 import { AdCreateDTO } from "../models/CreateAd.model";
 
@@ -23,7 +24,12 @@ export class AdService {
         return this.httpClient.get<AdShortInfoDTO[]>(this.commonApi.adUserFeaturesUrl + "/Advertisments/userAdvertisments", { params: params });
     }
 
-    SaveAdvertisment(advertisment:AdCreateDTO):Observable<AdDto>{
+    SaveAdvertisment(advertisment: AdCreateDTO): Observable<AdDto> {
         return this.httpClient.post<AdDto>(this.commonApi.adServiceUrl + "/Insert", advertisment);
+    }
+
+    GetAdvertismentById(adId: number): Observable<AdFullInfoDto> {
+        let params = new HttpParams().append("Id", adId);
+        return this.httpClient.get<AdFullInfoDto>(this.commonApi.adServiceUrl + "/GetById", { params: params });
     }
 }
