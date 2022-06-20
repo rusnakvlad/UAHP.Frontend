@@ -2,12 +2,6 @@
 <div class="center">
     <button mat-raised-button color="primary" routerLink="/advertisment/create">Create Advertisment</button>
 </div>
-<div class="center spacing">
-        <app-advertisment-short-info></app-advertisment-short-info>
-</div>
-<div class="center spacing">
-    <app-advertisment-short-info></app-advertisment-short-info>
-</div>
-<div class="center spacing">
-    <app-advertisment-short-info></app-advertisment-short-info>
+<div class="center spacing" *ngFor="let ad of advertisments">
+        <app-advertisment-short-info [advertisment]="ad"></app-advertisment-short-info>
 </div>

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AdShortInfoDTO } from 'src/app/find-advertisments/Models/AdShortInfo.model';
+import { AdShortInfoDTO } from 'src/app/models/AdShortInfo.model';
 
 @Component({
   selector: 'app-advertisment-short-info',
@@ -9,7 +9,7 @@ import { AdShortInfoDTO } from 'src/app/find-advertisments/Models/AdShortInfo.mo
 export class AdvertismentShortInfoComponent implements OnInit {
 
   @Input() advertisment: AdShortInfoDTO;
-  
+
   constructor() { }
 
   ngOnInit(): void {

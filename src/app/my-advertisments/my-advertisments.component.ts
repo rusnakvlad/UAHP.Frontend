@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AdShortInfoDTO } from '../models/AdShortInfo.model';
+import { AdService } from '../services/advertisment.service';
 
 @Component({
   selector: 'app-my-advertisments',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyAdvertismentsComponent implements OnInit {
 
-  constructor() { }
+  advertisments: AdShortInfoDTO[];
+  
+  constructor(private adService: AdService) { }
 
   ngOnInit(): void {
+    this.adService.GetAllUserAdvertisments().subscribe(advertisments => {
+      console.log(advertisments);
+      this.advertisments = advertisments;
+    });
   }
 
 }

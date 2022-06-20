@@ -37,69 +37,69 @@
 
               <mat-form-field class="full-width">
                 <mat-label>Price</mat-label>
-                <input matInput placeholder="Price" name="price">
+                <input matInput placeholder="Price" name="price" [(ngModel)]="ad.price">
               </mat-form-field>
 
               <mat-form-field class="full-width">
                 <mat-label>Region</mat-label>
-                <input matInput placeholder="Region" name="region">
-              </mat-form-field>
-
-              <mat-form-field class="full-width">
-                <mat-label>Distrinct</mat-label>
-                <input matInput placeholder="Distrinct" name="distrinct">
+                <input matInput placeholder="Region" name="region" [(ngModel)]="ad.region">
               </mat-form-field>
 
               <mat-form-field class="full-width">
                 <mat-label>City/Village</mat-label>
-                <input matInput placeholder="City/Village" name="city">
+                <input matInput placeholder="City/Village" name="city" [(ngModel)]="ad.city">
               </mat-form-field>
 
               <mat-form-field class="full-width">
                 <mat-label>Street</mat-label>
-                <input matInput placeholder="Street" name="street">
+                <input matInput placeholder="Street" name="street" [(ngModel)]="ad.street">
               </mat-form-field>
 
               <mat-form-field class="full-width">
                 <mat-label>Area</mat-label>
-                <input matInput placeholder="Area" name="Area">
+                <input matInput placeholder="Area" name="Area" [(ngModel)]="ad.areaOfHouse">
               </mat-form-field>
             </div>
             <div class="col">
               <mat-form-field class="full-width">
                 <mat-label>Floor amount</mat-label>
-                <input matInput placeholder="Floor Amount" name="floorAmount">
+                <input matInput placeholder="Floor Amount" name="floorAmount" [(ngModel)]="ad.floorAmount">
               </mat-form-field>
 
               <mat-form-field class="full-width">
                 <mat-label>Room amount</mat-label>
-                <input matInput placeholder="Room Amount" name="roomAmount">
+                <input matInput placeholder="Room Amount" name="roomAmount" [(ngModel)]="ad.roomNumber">
               </mat-form-field>
 
               <mat-form-field class="full-width">
                 <mat-label>Hause year</mat-label>
-                <input matInput placeholder="Hause year" name="hauseYear">
+                <input matInput placeholder="Hause year" name="hauseYear" [(ngModel)]="ad.houseYear">
               </mat-form-field>
 
               <mat-form-field class="full-width">
                 <mat-label>Hause type</mat-label>
-                <input matInput placeholder="Hause type" name="hauseType">
+                <input matInput placeholder="Hause type" name="hauseType" [(ngModel)]="ad.houseType">
               </mat-form-field>
 
+              <mat-form-field class="full-width">
+                <mat-label>Hause Number</mat-label>
+                <input matInput placeholder="Hause Number" name="hauseNumber" [(ngModel)]="ad.houseNumber">
+              </mat-form-field>
+              
               <div class="row">
-                <mat-checkbox class="checks" color="primary">Pool</mat-checkbox>
-                <mat-checkbox class="checks" color="primary">Balkon</mat-checkbox>
-                <mat-checkbox class="checks" color="primary">Purchase Oportunity</mat-checkbox>
+                <mat-checkbox class="checks" color="primary" name="pool" [(ngModel)]="ad.pool">Pool</mat-checkbox>
+                <mat-checkbox class="checks" color="primary" name="balkon" [(ngModel)]="ad.balkon">Balkon</mat-checkbox>
+                <mat-checkbox class="checks" color="primary" name="rent" [(ngModel)]="ad.rentOportunity">Rent Oportunity</mat-checkbox>
             </div>
             </div>
             <app-chips title="Tags" [allElements]="['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry']"></app-chips>
             <mat-form-field appearance="fill">
               <mat-label>Description</mat-label>
-              <textarea matInput placeholder="Leave a description"></textarea>
+              <textarea matInput placeholder="Leave a description" name="description" [(ngModel)]="ad.description"></textarea>
             </mat-form-field>
           </div>
           <mat-card-actions class="center">
-            <button mat-raised-button color="primary">Create and Publish</button>
+            <button mat-raised-button color="primary" (click)="Save()">Create and Publish</button>
           </mat-card-actions>
         </form>
       </mat-card-content>

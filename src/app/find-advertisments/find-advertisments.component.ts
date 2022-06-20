@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AdShortInfoDTO } from './Models/AdShortInfo.model';
-import { FindAdService } from './services/FindAd.service';
+import { AdShortInfoDTO } from '../models/AdShortInfo.model';
+import { AdService } from '../services/advertisment.service';
 
 @Component({
   selector: 'app-find-advertisments',
@@ -19,7 +19,7 @@ export class FindAdvertismentsComponent implements OnInit {
     return value;
   }
 
-  constructor(private findAdService: FindAdService) { }
+  constructor(private findAdService: AdService) { }
 
   ngOnInit(): void {
   }
